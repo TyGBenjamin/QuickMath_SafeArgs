@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.quickmathsafeargs.view.DashboardFragment"
+        android:label="DashboardFragment" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_operatorFragment"
+            app:destination="@id/operatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/operatorFragment"
+        android:name="com.example.quickmathsafeargs.view.OperatorFragment"
+        android:label="OperatorFragment" >
+        <action
+            android:id="@+id/action_operatorFragment_to_secondInputFragment"
+            app:destination="@id/secondInputFragment" />
+        <argument
+            android:name="input"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.quickmathsafeargs.view.ResultFragment"
+        android:label="ResultFragment" />
+    <fragment
+        android:id="@+id/secondInputFragment"
+        android:name="com.example.quickmathsafeargs.view.SecondInputFragment"
+        android:label="SecondInputFragment" >
+        <action
+            android:id="@+id/action_secondInputFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="input"
+            app:argType="string" />
+        <argument
+            android:name="operator"
+            app:argType="string" />
+    </fragment>
+</navigation>
