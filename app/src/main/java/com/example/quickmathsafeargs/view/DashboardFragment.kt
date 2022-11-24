@@ -51,7 +51,6 @@ class DashboardFragment : Fragment() {
         return ComposeView(requireActivity()).apply {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
-
                 QuickMathSafeArgsTheme {
                     Surface(modifier = Modifier.fillMaxSize()) {
                         Box(
@@ -64,12 +63,16 @@ class DashboardFragment : Fragment() {
                             Column() {
                                 TextField(value = input, onValueChange = { input = it })
 
-                                Button(onClick = {
-                                    println(input)
-                                    val action = DashboardFragmentDirections.
-                                    actionDashboardFragmentToOperatorFragment(input)
-                                    findNavController().navigate(action)
-                                }, modifier = Modifier.align(alignment = Alignment.CenterHorizontally)) {
+                                Button(
+                                    onClick = {
+                                        println(input)
+                                        navigateToOperator(
+                                            fragment = this@DashboardFragment,
+                                            input = input
+                                        )
+                                    },
+                                    modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
+                                ) {
                                     Text(text = "Input")
                                 }
                             }
@@ -81,7 +84,7 @@ class DashboardFragment : Fragment() {
     }
 }
 
-private fun navigateToOperator(input: String) {
+private fun navigateToOperator(fragment: DashboardFragment, input: String) {
     val action = DashboardFragmentDirections.actionDashboardFragmentToOperatorFragment(input)
-    findNavController(DashboardFragment()).navigate(action)
+    findNavController(fragment).navigate(action)
 }

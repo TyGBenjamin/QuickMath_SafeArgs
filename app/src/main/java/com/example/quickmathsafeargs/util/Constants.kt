@@ -1,4 +1,4 @@
-package com.example.quickmath.util
+package com.example.quickmathsafeargs.util
 
 /**
  * Constant values.

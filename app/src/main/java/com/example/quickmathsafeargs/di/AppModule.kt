@@ -1,16 +1,16 @@
 package com.example.quickmathsafeargs.di
 
-import com.example.quickmath.util.Constants
 import com.example.quickmathsafeargs.remote.ApiService
 import com.example.quickmathsafeargs.repo.Repository
 import com.example.quickmathsafeargs.repo.RepositoryImpl
+import com.example.quickmathsafeargs.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)

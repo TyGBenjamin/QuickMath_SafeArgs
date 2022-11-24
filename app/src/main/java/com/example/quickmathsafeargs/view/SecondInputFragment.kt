@@ -27,9 +27,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.quickmathsafeargs.viewmodel.MathViewModel
 import com.example.quickmathsafeargs.R
 import com.example.quickmathsafeargs.ui.theme.QuickMathSafeArgsTheme
+import com.example.quickmathsafeargs.viewmodel.MathViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -40,7 +40,7 @@ import kotlinx.coroutines.launch
  */
 @AndroidEntryPoint
 class SecondInputFragment : Fragment() {
-   val args: SecondInputFragmentArgs by navArgs()
+    val args: SecondInputFragmentArgs by navArgs()
     val viewModel by activityViewModels<MathViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {

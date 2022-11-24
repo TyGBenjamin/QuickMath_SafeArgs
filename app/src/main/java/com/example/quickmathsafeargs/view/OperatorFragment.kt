@@ -56,15 +56,12 @@ class OperatorFragment : Fragment() {
                             Column() {
                                 Text(text = args.input)
                                 Row() {
-
                                     Button(onClick = {
                                         navigateToSecondInput(
                                             fragment = this@OperatorFragment,
                                             input = args.input,
                                             operator = "+"
                                         )
-
-
                                     }) {
                                         Text(text = "+")
                                     }
@@ -74,8 +71,6 @@ class OperatorFragment : Fragment() {
                                             input = args.input,
                                             operator = "-"
                                         )
-
-
                                     }) {
                                         Text(text = "-")
                                     }
@@ -85,8 +80,6 @@ class OperatorFragment : Fragment() {
                                             input = args.input,
                                             operator = "*"
                                         )
-
-
                                     }) {
                                         Text(text = "x")
                                     }
@@ -96,7 +89,6 @@ class OperatorFragment : Fragment() {
                                             input = args.input,
                                             operator = "/"
                                         )
-
                                     }) {
                                         Text(text = "÷")
                                     }

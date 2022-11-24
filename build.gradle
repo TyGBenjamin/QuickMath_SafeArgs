@@ -14,4 +14,4 @@ plugins {
     id 'com.google.dagger.hilt.android' version '2.44' apply false
 }
 
-//apply from: "android-config/android.config.gradle.kts"
+apply from: "android-config/android.config.gradle.kts"
